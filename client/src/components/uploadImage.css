@@ -1,0 +1,107 @@
+/* uploadImage.css */
+
+:root {
+    --primary-bg: #1a1a1d;          /* Dark primary background color */
+    --secondary-bg: #2a2a2d;        /* Secondary background color */
+    --text-color: #ffffff;          /* Light text color for contrast */
+    --highlight-color: #00c6ff;     /* Highlight color for accents */
+    --error-color: #ff4d4d;         /* Error message color */
+    --border-color: #333;           /* Border color */
+    --button-bg: #007bff;           /* Button background color */
+    --button-hover-bg: #005ea8;     /* Button hover background color */
+    --input-bg: #333;               /* Input background color */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Shadow color for depth */
+  }
+  
+  .upload-container {
+    background-color: var(--primary-bg);  /* Use primary background color */
+    color: var(--text-color);             /* Use light text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--shadow-color); /* Apply initial shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Add transition for shadow and transform */
+  }
+  
+  .upload-container:hover {
+    box-shadow: 0 6px 20px var(--shadow-color); /* Enhance shadow on hover */
+    transform: translateY(-5px);  /* Lift the component on hover */
+    background-color: #222;       /* Change background color slightly on hover */
+  }
+  
+  .upload-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    transition: color 0.3s ease;  /* Transition for text color change */
+  }
+  
+  .upload-title:hover {
+    color: var(--highlight-color); /* Highlight color on hover */
+  }
+  
+  .file-input {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transition for border and box-shadow */
+  }
+  
+  .file-input:hover {
+    border-color: var(--highlight-color); /* Change border color on hover */
+    box-shadow: 0 2px 8px var(--shadow-color); /* Apply shadow on hover */
+    transform: translateY(-2px);  /* Slight lift on hover */
+  }
+  
+  .upload-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition for button styling */
+  }
+  
+  .upload-button:hover {
+    background-color: var(--button-hover-bg); /* Change background color on hover */
+    transform: translateY(-3px);  /* Lift effect on hover */
+    box-shadow: 0 4px 12px var(--shadow-color); /* Add shadow on hover */
+  }
+  
+  .upload-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    box-shadow: none;  /* Remove shadow for disabled state */
+    transform: none;   /* Remove lift effect for disabled state */
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;  /* Transition for error message color */
+  }
+  
+  .error-message:hover {
+    color: var(--highlight-color); /* Change color on hover */
+  }
+  

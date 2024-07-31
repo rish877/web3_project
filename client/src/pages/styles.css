@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #1e1e1e;  /* Dark background */
+    --secondary-color: #2e2e2e;  /* Darker for contrast */
+    --text-color: #ffffff;  /* Light text color */
+    --button-background: #3a3a3a;  /* Button background */
+    --button-text: #ffffff;  /* Button text */
+    --border-color: #444444;  /* Border color */
+    --glow-color: rgba(255, 255, 255, 0.3); /* Glow color */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 16px;
+    background-size: cover; /* Ensure the background image covers the container */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px var(--glow-color);
+}
+
+button {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--border-color);
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+input {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+    width: 100%;
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 5px var(--glow-color);
+}
+
+.background-image-input {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+}

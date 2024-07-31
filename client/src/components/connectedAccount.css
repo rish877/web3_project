@@ -1,0 +1,76 @@
+/* connectedAccount.css */
+
+:root {
+    --dark-bg: #1a1a1d;           /* Dark background color for the component */
+    --light-text: #ffffff;        /* White text color for contrast */
+    --highlight-text: #00c6ff;    /* Highlight color for important text */
+    --border-color: #333;         /* Border color */
+    --padding: 15px;              /* Padding around the component */
+    --shadow-color: rgba(0, 0, 0, 0.5); /* Shadow color for depth */
+    --hover-shadow-color: rgba(0, 114, 255, 0.3); /* Hover shadow color */
+  }
+  
+  .connected-account {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    border-radius: 12px;          /* Rounded corners */
+    padding: var(--padding);
+    box-shadow: 0 4px 12px var(--shadow-color); /* Initial shadow */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;            /* Centering the component */
+    transition: box-shadow 0.4s ease, transform 0.4s ease, background-color 0.4s ease; /* Smooth transitions */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .connected-account:hover {
+    box-shadow: 0 6px 20px var(--hover-shadow-color); /* Enhanced shadow on hover */
+    transform: translateY(-5px);  /* Lift effect */
+    background-color: #222;       /* Slightly lighter background on hover */
+  }
+  
+  .connected-account::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent, var(--hover-shadow-color));
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+  
+  .connected-account:hover::before {
+    transform: scale(1);
+  }
+  
+  .connected-account p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .connected-account p span {
+    color: var(--highlight-text);
+    font-weight: 700;
+  }
+  
+  @media (min-width: 768px) {
+    .connected-account {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--padding) 20px;
+    }
+  
+    .connected-account p {
+      text-align: left;
+    }
+  }
+  

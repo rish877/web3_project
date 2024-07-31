@@ -1,0 +1,153 @@
+/* navbar.css */
+
+:root {
+    --navbar-height: 80px;
+    --primary-color: #1a1a1d;
+    --gradient-start: #00c6ff;
+    --gradient-end: #0072ff;
+    --border-color: #161616;
+    --text-color: #ffffff;
+    --hover-bg: rgba(0, 114, 255, 0.1);
+    --hover-text-color: #00c6ff;
+    --button-bg: #0052cc;
+    --button-hover-bg: #0073e6;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar {
+    width: 100%;
+    height: var(--navbar-height);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border-bottom: 2px solid var(--border-color);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo:hover {
+    color: var(--hover-text-color);
+  }
+  
+  .navbar .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar .nav-item {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .navbar .nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--hover-text-color);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .navbar .nav-item:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .navbar .nav-item:hover {
+    color: var(--hover-text-color);
+    background-color: var(--hover-bg);
+  }
+  
+  .connected-account {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+  }
+  
+  .connected-account-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .connected-account-icon:hover {
+    transform: rotate(360deg);
+    background-color: var(--button-hover-bg);
+  }
+  
+  .connected-account-name {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+  }
+  
+  .cta-button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar .nav-items {
+      display: none;
+    }
+  
+    .navbar .menu-toggle {
+      display: block;
+      cursor: pointer;
+      color: var(--text-color);
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .navbar .menu-toggle {
+      display: none;
+    }
+  }
+  

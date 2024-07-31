@@ -1,0 +1,97 @@
+/* getImage.css */
+
+:root {
+    --card-bg: #1a1a1d;               /* Card background color */
+    --text-color: #ffffff;            /* Text color for contrast */
+    --highlight-color: #00c6ff;       /* Highlight color for buttons */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color for depth */
+    --hover-shadow-color: rgba(0, 0, 0, 0.4); /* Shadow color on hover */
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .image-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 300px;
+    height: 240px;
+    position: relative;
+  }
+  
+  .image-card:hover {
+    box-shadow: 0 6px 12px var(--hover-shadow-color);
+    transform: translateY(-5px);
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .view-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-link:hover {
+    background-color: #005ea8;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: var(--highlight-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .pagination button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    background-color: #005ea8;
+    transform: translateY(-3px);
+  }
+  
+  .pagination span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
