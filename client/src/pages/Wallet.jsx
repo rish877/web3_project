@@ -29,13 +29,11 @@ const Wallet = () => {
             z-index: -10;
             height: 100vh;
             width: 100%;
-            background: linear-gradient(to right, #1e1e1e 1px, transparent 1px),
-                        linear-gradient(to bottom, #1e1e1e 1px, transparent 1px);
-            background-size: 6rem 4rem;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #121212;
+            overflow: hidden;
           }
 
           .wallet-background {
@@ -44,31 +42,46 @@ const Wallet = () => {
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle 500px at 50% 200px, #343a40, transparent);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
+            background: url('https://img.freepik.com/premium-photo/abstract-3d-rendering-black-cubes-with-red-neon-lights-dark-background-closeup-red-glowing-blockchain-network-with-interconnected-blocks-data-fields-featuring-ai-generated_585735-4602.jpg') no-repeat center center;
+            background-size: cover;
+           
+            animation: background-animation 10s infinite alternate;
+          }
+
+          @keyframes background-animation {
+            0% {
+              transform: scale(1);
+              
+            }
+            50% {
+              transform: scale(1.1);
+            
+            }
+            100% {
+              transform: scale(1);
+             
+            }
           }
 
           .wallet-title {
             font-weight: bold;
             font-size: 42px;
-            background: linear-gradient(to right, #00b4d8, #5e60ce);
+            background: linear-gradient(to right, white, #5e60ce);
             -webkit-background-clip: text;
             color: transparent;
             transition: color 0.3s ease-in-out;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
           }
 
           .wallet-button {
+          
             position: relative;
             padding: 12px 24px;
-            color: #ffffff;
-            background-color: #0077b6;
+            color: white;
+            background-color: black;
             border: none;
             border-radius: 8px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 16px;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
@@ -86,12 +99,19 @@ const Wallet = () => {
             transform: translateY(0);
             box-shadow: 0 3px 10px rgba(0, 95, 115, 0.3);
           }
+
+          .wallet-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+          }
         `}
       </style>
 
       <div className="wallet-container">
-        <div className="wallet-background">
-          <h1 className="wallet-title">Crypted Blockchain Vault</h1>
+        <div className="wallet-background"></div>
+        <div className="wallet-content">
+          <h1 className="wallet-title">Decentralized Image Uploader</h1>
           <button
             className="wallet-button"
             onClick={handleWalletConnection}
