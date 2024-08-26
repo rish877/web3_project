@@ -24,7 +24,7 @@ const UploadImage = ({ reloadEffect }) => {
       setLoading(true);
       const formData = new FormData();
       formData.append("file", file);
-      const url = `http://localhost:3000/api/uploadImage`;
+      const url = `https://web3-project-1.onrender.com/api/uploadImage`;
       const token = localStorage.getItem("token");
 
       const config = {
