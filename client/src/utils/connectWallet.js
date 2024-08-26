@@ -22,7 +22,7 @@ export const connectWallet = async()=>{
      const dataSignature = {
       signature
      }
-     const url=`http://localhost:3000/api/authentication?address=${selectedAccount}`
+     const url=`https://web3-project-1.onrender.com/api/authentication?address=${selectedAccount}`
      const res = await axios.post(url,dataSignature)
      const token = res.data.token
      
