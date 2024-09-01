@@ -1,4 +1,4 @@
-# Crypted Blockchain Vault
+# Decentralized Image Uploader
 ## Crypted IPFS Vault using MERN Stack and Blockchain
 
 ### Overview
