@@ -1,5 +1,5 @@
 # Decentralized Image Uploader
-## Crypted IPFS Vault using MERN Stack and Blockchain
+##  MERN Stack and Blockchain
 
 ### Overview
 This project implements a crypted IPFS vault using the MERN (MongoDB, Express.js, React.js, Node.js) stack along with blockchain technology. The vault allows users to securely store files on the IPFS network while encrypting the data and managing access through blockchain-based and JWT authentication.
